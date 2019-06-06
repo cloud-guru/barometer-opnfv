@@ -133,3 +133,166 @@ sudo ovs-vsctl show
         is_connected: true - can be a marker that ovs plugins successfully connected
     ovs_version: "2.5.3"
 on the host.
+
+
+# list of target it can collect data:
+    aggregation . . . . . yes
+    amqp    . . . . . . . yes
+    amqp1   . . . . . . . yes
+    apache  . . . . . . . yes
+    apcups  . . . . . . . yes
+    apple_sensors . . . . no
+    aquaero . . . . . . . no (libaquaero5.h not found)
+    ascent  . . . . . . . yes
+    barometer . . . . . . no
+    battery . . . . . . . yes
+    bind  . . . . . . . . yes
+    ceph  . . . . . . . . yes
+    cgroups . . . . . . . yes
+    chrony. . . . . . . . yes
+    conntrack . . . . . . yes
+    contextswitch . . . . yes
+    cpu . . . . . . . . . yes
+    cpufreq . . . . . . . yes
+    cpusleep  . . . . . . yes
+    csv . . . . . . . . . yes
+    curl  . . . . . . . . yes
+    curl_json . . . . . . yes
+    curl_xml  . . . . . . yes
+    dbi . . . . . . . . . yes
+    df  . . . . . . . . . yes
+    disk  . . . . . . . . yes
+    dns . . . . . . . . . yes
+    dpdkevents. . . . . . yes
+    dpdkstat  . . . . . . yes
+    drbd  . . . . . . . . yes
+    email . . . . . . . . yes
+    entropy . . . . . . . yes
+    ethstat . . . . . . . yes
+    exec  . . . . . . . . yes
+    fhcount . . . . . . . yes
+    filecount . . . . . . yes
+    fscache . . . . . . . yes
+    gmond . . . . . . . . yes
+    gps . . . . . . . . . yes
+    gpu_nvidia  . . . . . no
+    grpc  . . . . . . . . no (libgrpc++ not found)
+    hddtemp . . . . . . . yes
+    hugepages . . . . . . yes
+    intel_pmu . . . . . . yes
+    intel_rdt . . . . . . yes
+    interface . . . . . . yes
+    ipc . . . . . . . . . yes
+    ipmi  . . . . . . . . yes
+    iptables  . . . . . . yes
+    ipvs  . . . . . . . . yes
+    irq . . . . . . . . . yes
+    java  . . . . . . . . yes
+    load  . . . . . . . . yes
+    logfile . . . . . . . yes
+    log_logstash  . . . . yes
+    lpar  . . . . . . . . no (AIX only)
+    lua . . . . . . . . . yes
+    lvm . . . . . . . . . no (disabled on command line)
+    madwifi . . . . . . . yes
+    match_empty_counter . yes
+    match_hashed  . . . . yes
+    match_regex . . . . . yes
+    match_timediff  . . . yes
+    match_value . . . . . yes
+    mbmon . . . . . . . . yes
+    mcelog  . . . . . . . yes
+    md  . . . . . . . . . yes
+    memcachec . . . . . . yes
+    memcached . . . . . . yes
+    memory  . . . . . . . yes
+    mic . . . . . . . . . no (MicAccessApi not found)
+    modbus  . . . . . . . yes
+    mqtt  . . . . . . . . yes
+    multimeter  . . . . . yes
+    mysql . . . . . . . . yes
+    netapp  . . . . . . . no (netapp_api.h not found)
+    netlink . . . . . . . yes
+    network . . . . . . . yes
+    nfs . . . . . . . . . yes
+    nginx . . . . . . . . yes
+    notify_desktop  . . . yes
+    notify_email  . . . . yes
+    notify_nagios . . . . yes
+    ntpd  . . . . . . . . yes
+    numa  . . . . . . . . yes
+    nut . . . . . . . . . yes
+    olsrd . . . . . . . . yes
+    onewire . . . . . . . no (owcapi.h not found)
+    openldap  . . . . . . yes
+    openvpn . . . . . . . yes
+    oracle  . . . . . . . no (ORACLE_HOME is not set)
+    ovs_events  . . . . . yes
+    ovs_stats . . . . . . yes
+    pcie_errors . . . . . yes
+    perl  . . . . . . . . no (disabled on command line)
+    pf  . . . . . . . . . no
+    pinba . . . . . . . . yes
+    ping  . . . . . . . . yes
+    postgresql  . . . . . yes
+    powerdns  . . . . . . yes
+    processes . . . . . . yes
+    protocols . . . . . . yes
+    python  . . . . . . . yes
+    redis . . . . . . . . yes
+    routeros  . . . . . . no (routeros_api.h not found)
+    rrdcached . . . . . . yes
+    rrdtool . . . . . . . yes
+    sensors . . . . . . . yes
+    serial  . . . . . . . yes
+    sigrok  . . . . . . . no (pkg-config could not find libsigrok)
+    smart . . . . . . . . yes
+    snmp  . . . . . . . . yes
+    snmp_agent  . . . . . yes
+    statsd  . . . . . . . yes
+    swap  . . . . . . . . yes
+    synproxy  . . . . . . yes
+    syslog  . . . . . . . yes
+    table . . . . . . . . yes
+    tail_csv  . . . . . . yes
+    tail  . . . . . . . . yes
+    tape  . . . . . . . . no
+    target_notification . yes
+    target_replace  . . . yes
+    target_scale  . . . . yes
+    target_set  . . . . . yes
+    target_v5upgrade  . . yes
+    tcpconns  . . . . . . yes
+    teamspeak2  . . . . . yes
+    ted . . . . . . . . . yes
+    thermal . . . . . . . yes
+    threshold . . . . . . yes
+    tokyotyrant . . . . . no (tcrdb.h not found)
+    turbostat . . . . . . yes
+    unixsock  . . . . . . yes
+    uptime  . . . . . . . yes
+    users . . . . . . . . yes
+    uuid  . . . . . . . . yes
+    varnish . . . . . . . yes
+    virt  . . . . . . . . yes
+    vmem  . . . . . . . . yes
+    vserver . . . . . . . yes
+    wireless  . . . . . . yes
+    write_graphite  . . . yes
+    write_http  . . . . . yes
+    write_kafka . . . . . yes
+    write_log . . . . . . yes
+    write_mongodb . . . . yes
+    write_prometheus. . . yes
+    write_redis . . . . . yes
+    write_riemann . . . . yes
+    write_sensu . . . . . yes
+    write_stackdriver . . no
+    write_syslog . .  . . yes
+    write_tsdb  . . . . . yes
+    xencpu  . . . . . . . no
+    xmms  . . . . . . . . no
+    zfs_arc . . . . . . . yes
+    zone  . . . . . . . . no
+    zookeeper . . . . . . yes
+
