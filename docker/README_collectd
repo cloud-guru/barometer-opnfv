@@ -54,8 +54,10 @@ from root barometer folder.
 
 To run builded image run
 sudo docker images # get docker image id
-sudo docker run -ti --net=host -v `pwd`/src/collectd/collectd_sample_configs-master:/opt/collectd/etc/collectd.conf.d \
--v /var/run:/var/run -v /tmp:/tmp --privileged <image id>
+mkdir /collectd_config
+cp {repo_dir}/src/collectd/collectd_sample_configs-master/* 
+sudo docker run -tid --net=host --name collectd -v /collectd_config:/opt/collectd/etc/collectd.conf.d \
+-v /var/run:/var/run -v /tmp:/tmp --privileged cloudguru1/collectd
 
 NOTE: barometer-collectd-master container uses a different sample configurations files
 compared to regular barometer-collectd container (src/collectd/collectd_sample_configs-master)
