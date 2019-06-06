@@ -4,6 +4,9 @@ RUN yum update -y && \
         yum clean all && \
         git config --global http.sslVerify false
 
+RUN rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
+    yum install -y qpid-proton-c-devel
+
 ENV DOCKER y
 ENV COLLECTD_FLAVOR master
 ENV WITH_DPDK y
