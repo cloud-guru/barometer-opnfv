@@ -68,6 +68,7 @@ config $(WORK_DIR)/Makefile: $(WORK_DIR)/configure
 	@echo "Configure done"
 
 force_make: $(WORK_DIR)/Makefile
+        $(AT)sudo yum install -y qpid-proton-c-devel-0.28.0-1.el7.x86_64
 	$(AT) $(MAKE) -C $(WORK_DIR) $(MORE_MAKE_FLAGS)
 	@echo "Make done"
 
@@ -112,6 +113,7 @@ sanity:
 # boot collectd is the process to produce the script 'configure'
 boot $(WORK_DIR)/configure: $(TAG_DONE_FLAG)
 	@echo "booting up collectd"
+        $(AT)sudo yum install -y qpid-proton-c-devel-0.28.0-1.el7.x86_64
 	$(AT)cd $(WORK_DIR); $(BUILD_CMD)
 	@echo "done booting collectd"
 
